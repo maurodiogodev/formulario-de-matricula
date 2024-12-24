@@ -3,6 +3,7 @@ textarea,
 select {
     appearance: none;
     width: 100%;
+    color: var(--text-secundary);
 
     border-radius: .8rem;
     border: 1px solid var(--stroke-default);
