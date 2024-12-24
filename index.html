@@ -17,6 +17,7 @@
 
 <body>
     <div id="app">
+
         <main>
             <div class="main-container">
                 <div class="back">
@@ -31,7 +32,49 @@
                     Amanhã.
                 </p>
             </div>
+
+            <form method="post" enctype="multipart/form-data">
+                <fieldset class="child-info">
+                    <legend>Informações da criança</legend>
+
+                    <div class="input-wrapper">
+                        <label for="fullname">Nome completo</label>
+                        <input id="fullname" name="fullname" type="text" placeholder="Qual é o nome da criança">
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="date-of-birth">Data de nascimento</label>
+                        <input id="date-of-birth" name="date-of-birth" type="date" lang="pt-br">
+                    </div>
+
+                    <div class="select-wrapper">
+                        <label for="gender">Sexo</label>
+                        <select name="gender" id="gender">
+                            <option value="female">Feminino</option>
+                            <option value="male">Masculino</option>
+                        </select>
+                    </div>
+
+                    <div class="textarea-wrapper">
+                        <label for="medical-info">Informações médicas</label>
+                        <textarea name="medical-info" id="medical-info" cols="30" rows="10"
+                            placeholder="A criança possui alguma condição médica que a escola deve estar ciente? (Se sim, especifique)"></textarea>
+                    </div>
+
+                    <div class="droparea-wrapper">
+                        <label for="birth-file">Certidão de nascimento</label>
+                        <input type="file" name="birth-file" id="birth-file">
+
+                        <img src="./assets/icons/cloud-upload.svg" alt="um ícone de nuvem com seta pra cima">
+                        <p>
+                            Clique aqui para <br>
+                            selecionar arquivos
+                        </p>
+                    </div>
+                </fieldset>
+            </form>
         </main>
+
         <aside>
             <div class="aside-container">
                 <header>
@@ -50,6 +93,7 @@
                 <img src="./assets/illustration.svg" alt="Ilustração de uma professora com crianças prestando atenção">
             </div>
         </aside>
+
     </div>
 </body>
 
