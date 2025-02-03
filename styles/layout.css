@@ -1,51 +1,79 @@
 #app {
-    display: grid;
-    grid-template-columns: 51.25% 48.75%;
+  display: grid;
+  grid-template-columns: 51.25% 48.75%;
 
-    height: 100vh;
-    overflow: hidden;
+  height: 100vh;
+  overflow: hidden;
 }
 
 main {
-    overflow: auto;
-    padding: 6.4rem;
+  padding: 6.4rem;
+  overflow: auto;
 
-    .main-container {
-        max-width: 52.8rem;
-        margin-left: auto;
-    }
+  .main-container {
+    max-width: 52.8rem;
+    margin-left: auto;
+  }
 
-    .back {
-        display: flex;
-        align-items: center;
-        gap: .8rem;
-        margin-bottom: 2.4rem;
-    }
+  .back {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 2.4rem;
+  }
 
-    h1 {
-        font: 600 2.4rem/1.5 var(--font-family);
-        margin-bottom: .8rem;
-    }
+  h1 {
+    font: 600 2.4rem/1.5 var(--font-family);
+    margin-bottom: 0.8rem;
+  }
 }
 
 aside {
-    padding: 6.4rem;
-    background-color: var(--surface-secundary);
+  padding: 6.4rem;
+  background-color: var(--surface-secundary);
 
-    .aside-container {
-        max-width: 49.6rem;
+  .aside-container {
+    max-width: 49.6rem;
 
-        >img {
-            margin-top: 3.2rem;
-        }
+    > img {
+      margin-top: 3.2rem;
     }
+  }
 
-    h2 {
-        font: 600 4rem/1.25 var(--font-family);
-        margin-bottom: .8rem;
+  h2 {
+    font: 600 4rem/1.25 var(--font-family);
+    margin-bottom: 0.8rem;
 
-        span {
-            color: var(--text-highlight);
-        }
+    span {
+      color: var(--text-highlight);
     }
+  }
+}
+
+@media (width <= 360px) {
+  #app {
+    display: flex;
+    flex-direction: column;
+
+    overflow: auto;
+  }
+
+  main {
+    padding: 2.4rem;
+    overflow: unset;
+  }
+
+  aside {
+    order: -1;
+    padding: 2.4rem;
+
+    header {
+      text-align: center;
+
+      & h2,
+      & p {
+        display: none;
+      }
+    }
+  }
 }
